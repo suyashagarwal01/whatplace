@@ -1,0 +1,230 @@
+/* Material Design 3 – blue primary, soft UI, Inter */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* MD3-inspired tokens (blue primary) */
+  --md-primary: #2563eb;
+  --md-on-primary: #ffffff;
+  --md-primary-container: #dbeafe;
+  --md-on-primary-container: #1e40af;
+  --md-surface: #f8fafc;
+  --md-surface-container: #f1f5f9;
+  --md-surface-container-high: #e2e8f0;
+  --md-outline: #e2e8f0;
+  --md-outline-variant: #cbd5e1;
+  --md-on-surface: #1e293b;
+  --md-on-surface-variant: #64748b;
+  --md-error-container: #fee2e2;
+  --md-on-error-container: #991b1b;
+  --md-success-container: #dcfce7;
+  --md-on-success-container: #166534;
+  --md-shape-full: 9999px;
+  --md-shape-large: 16px;
+  --md-shape-medium: 12px;
+  --md-shape-small: 8px;
+  --md-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.06);
+  --md-elevation-2: 0 2px 6px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+body {
+  width: 320px;
+  min-height: 200px;
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--md-on-surface);
+  background: #fff;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100%;
+}
+
+/* Header – MD3 title / label */
+.header {
+  text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--md-outline-variant);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--md-primary);
+}
+
+.tagline {
+  margin: 6px 0 0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--md-on-surface-variant);
+}
+
+/* Main content */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+}
+
+/* MD3 Filled button (primary) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 24px;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--md-on-primary);
+  background: var(--md-primary);
+  border: none;
+  border-radius: var(--md-shape-full);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, background 0.2s ease, transform 0.1s ease;
+  box-shadow: var(--md-elevation-1);
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-primary:disabled,
+.btn-primary:disabled:hover,
+.btn-primary:disabled:active {
+  background: #94a3b8;
+  color: #f8fafc;
+  cursor: not-allowed;
+  transform: none;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+}
+
+/* Status – MD3 tonal containers */
+.status {
+  padding: 12px 16px;
+  border-radius: var(--md-shape-medium);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+}
+
+.status.loading {
+  background: var(--md-primary-container);
+  color: var(--md-on-primary-container);
+}
+
+.status.error {
+  background: var(--md-error-container);
+  color: var(--md-on-error-container);
+}
+
+.status.success {
+  background: var(--md-success-container);
+  color: var(--md-on-success-container);
+}
+
+/* Result card – MD3 surface container */
+.result {
+  padding: 16px;
+  background: var(--md-surface-container);
+  border: 1px solid var(--md-outline-variant);
+  border-radius: var(--md-shape-medium);
+  box-shadow: var(--md-elevation-1);
+}
+
+.result h2 {
+  margin: 0 0 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--md-on-surface-variant);
+}
+
+.result-text {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--md-on-surface);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Result action – MD3 text button with icon (medium emphasis) */
+.result-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 12px 10px 0;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--md-primary);
+  text-decoration: none;
+  border-radius: var(--md-shape-small);
+  transition: background 0.2s ease, color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.result-action:hover {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--md-on-primary-container);
+}
+
+.result-action:active {
+  background: rgba(37, 99, 235, 0.12);
+}
+
+.result-action-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+/* Footer – MD3 text link */
+.footer {
+  padding-top: 12px;
+  border-top: 1px solid var(--md-outline-variant);
+  text-align: center;
+}
+
+.footer a {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--md-primary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer a:hover {
+  color: var(--md-on-primary-container);
+  text-decoration: underline;
+}

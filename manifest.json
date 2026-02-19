@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "WhatPlace - Find Location in Image/Video",
+  "version": "1.0.0",
+  "description": "One-click identification of the location shown in the current image or video (YouTube, Vimeo, etc.) using AI vision.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Find location in this image/video"
+  },
+  "options_page": "options/options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

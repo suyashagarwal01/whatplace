@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>WhatPlace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>WhatPlace</h1>
+      <p class="tagline">Find the location in this image or video</p>
+    </header>
+
+    <main class="main">
+      <button id="findLocation" class="btn-primary" type="button">
+        <span class="btn-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="currentColor"/>
+          </svg>
+        </span>
+        Find Location
+      </button>
+
+      <div id="status" class="status" aria-live="polite" hidden></div>
+      <div id="result" class="result" hidden>
+        <h2>Location</h2>
+        <p id="resultText" class="result-text"></p>
+        <a id="openInMaps" class="result-action" href="#" target="_blank" rel="noopener">
+          <span class="result-action-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="currentColor"/>
+            </svg>
+          </span>
+          Open in Maps
+        </a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <a id="optionsLink" href="#">Settings (API key)</a>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
